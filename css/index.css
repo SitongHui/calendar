@@ -1,0 +1,44 @@
+/*reset.css*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*calender css*/
+.calender {
+    width: 240px;
+    background: #f9f9f9;
+    margin: 50px auto;
+    padding-bottom: 5px;
+}
+.calender > .calender-title {
+    border-bottom: 1px solid #d0cdcd;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.calender > .calender-title > .last-month, .calender > .calender-title > .next-month{
+    cursor: pointer;
+    font-weight: bold;
+}
+.calender > .calender-main > table {
+    width: 100%;
+    text-align: center;
+}
+.calender > .calender-main > table td {
+    padding: 3px;
+    cursor: pointer;
+}
+.calender > .calender-main > table td:hover {
+    background: #f0f0f0;
+}
+.currentday{
+    color: red;
+    font-weight: bold;
+}
+.currentmonth{
+    color: #515151;
+}
+.othermonth{
+    color: #c6c6c6;
+}
