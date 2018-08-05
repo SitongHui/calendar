@@ -33,14 +33,14 @@ function calender() {
         var calenderMain = $('.calender > .calender-main')[0];
         var calenderMainBody = $('.calender > .calender-main > table')[0];
         var _titleHtml = '<tr>' +
-            '<th>日</th>' +
-            '<th>一</th>' +
-            '<th>二</th>' +
-            '<th>三</th>' +
-            '<th>四</th>' +
-            '<th>五</th>' +
-            '<th>六</th>' +
-            '</tr>';
+                '<th>日</th>' +
+                '<th>一</th>' +
+                '<th>二</th>' +
+                '<th>三</th>' +
+                '<th>四</th>' +
+                '<th>五</th>' +
+                '<th>六</th>' +
+                '</tr>';
         var _bodyHtml = '';
         for(i = 0; i < 6; i++) {
             _bodyHtml += '<tr>' +
@@ -74,14 +74,18 @@ function calender() {
         var calenderData = $('td');
         var _firstDay = new Date(_year, _month - 1, 1);
         for (var i = 0; i < calenderData.length; i++){
-            var _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());/*星期 日 月 年*/
-            var _thisDayStr = getDateStr(_thisDay);/*例如：20180801*/
+            /*星期 日 月 年*/
+            var _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());
+            /*例如：20180801*/
+            var _thisDayStr = getDateStr(_thisDay);
             calenderData[i].innerText = _thisDay.getDate();
             calenderData[i].setAttribute('data',_thisDayStr);
 
             if(_thisDayStr == getDateStr(new Date())){
-                calenderData[i].className = 'currentday';   /*当天*/
+                /*当天*/
+                calenderData[i].className = 'currentday';
             }else if(_thisDayStr.substr(0,6) == getDateStr(_firstDay).substr(0,6)){
+                /*当月*/
                 calenderData[i].className = 'currentmonth';
             }else{
                 calenderData[i].className = 'othermonth';
