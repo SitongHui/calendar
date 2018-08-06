@@ -42,7 +42,7 @@ function calender() {
                 '<th>六</th>' +
                 '</tr>';
         var _bodyHtml = '';
-        for(i = 0; i < 6; i++) {
+        for(var i = 0; i < 6; i++) {
             _bodyHtml += '<tr>' +
                 '<td></td>' +
                 '<td></td>' +
@@ -79,7 +79,7 @@ function calender() {
             /*例如：20180801*/
             var _thisDayStr = getDateStr(_thisDay);
             calenderData[i].innerText = _thisDay.getDate();
-            calenderData[i].setAttribute('data',_thisDayStr);
+            calenderData[i].setAttribute('data', _thisDayStr);
 
             if(_thisDayStr == getDateStr(new Date())){
                 /*当天*/
